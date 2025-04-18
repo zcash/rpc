@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.1.0 RPC Docs - getrawchangeaddress">
+    <meta name="description" content="Zcash 6.2.0 RPC Docs - getrawchangeaddress">
     <meta name="author" content="">
-    <title>getrawchangeaddress - Zcash 6.1.0 RPC Docs</title>
+    <title>getrawchangeaddress - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
   <style>
@@ -23,21 +23,36 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Zcash 6.1.0 RPC Docs</a>
+      <a class="navbar-brand" href="/">Zcash 6.2.0 RPC Docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-            <h1>getrawchangeaddress - Zcash 6.1.0 RPC</h1>
+            <h1>getrawchangeaddress - Zcash 6.2.0 RPC</h1>
           
-            <pre>getrawchangeaddress is DEPRECATED and will be removed in a future release
+            <pre>getrawchangeaddress
 
-Change addresses are a wallet-internal feature. Use a unified address for
-a dedicated change account instead, or restart with `-allowdeprecated=getrawchangeaddress` 
-if you require backward compatibility.
+getrawchangeaddress is DISABLED and will be removed in a future release.
+Change addresses are a wallet-internal feature. Use a unified address
+for a dedicated change account instead.
+You can restart the node with `-allowdeprecated=getrawchangeaddress`
+to re-enable this method during its deprecation period.
 See https://zcash.github.io/zcash/user/deprecation.html for more information.
+
+Returns a new transparent Zcash address for receiving change.
+This is for use with raw transactions, NOT normal use. Additionally,
+the resulting address does not correspond to the &#34;change&#34; HD derivation
+path.
+
+Result:
+&#34;address&#34;    (string) The transparent address
+
+Examples:
+&gt; zcash-cli getrawchangeaddress 
+&gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;getrawchangeaddress&#34;, &#34;params&#34;: [] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:8232/
+
 </pre>
             <hr>
           

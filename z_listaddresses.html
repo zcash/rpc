@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.1.0 RPC Docs - z_listaddresses">
+    <meta name="description" content="Zcash 6.2.0 RPC Docs - z_listaddresses">
     <meta name="author" content="">
-    <title>z_listaddresses - Zcash 6.1.0 RPC Docs</title>
+    <title>z_listaddresses - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
   <style>
@@ -23,20 +23,40 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Zcash 6.1.0 RPC Docs</a>
+      <a class="navbar-brand" href="/">Zcash 6.2.0 RPC Docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-            <h1>z_listaddresses - Zcash 6.1.0 RPC</h1>
+            <h1>z_listaddresses - Zcash 6.2.0 RPC</h1>
           
-            <pre>z_listaddresses is DEPRECATED and will be removed in a future release
+            <pre>z_listaddresses ( includeWatchonly )
 
-Use listaddresses or restart with `-allowdeprecated=z_listaddresses`
-if you require backward compatibility.
+z_listaddresses is DISABLED and will be removed in a future release.
+Please use `listaddresses` instead.
+You can restart the node with `-allowdeprecated=z_listaddresses`
+to re-enable this method during its deprecation period.
 See https://zcash.github.io/zcash/user/deprecation.html for more information.
+
+Returns the list of shielded addresses belonging to the wallet.
+
+This never returns Unified Addresses; see &#39;listaddresses&#39; for them.
+
+Arguments:
+1. includeWatchonly (bool, optional, default=false) Also include watchonly addresses (see &#39;z_importviewingkey&#39;)
+
+Result:
+[                     (json array of string)
+  &#34;zaddr&#34;           (string) a zaddr belonging to the wallet
+  ,...
+]
+
+Examples:
+&gt; zcash-cli z_listaddresses 
+&gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;z_listaddresses&#34;, &#34;params&#34;: [] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:8232/
+
 </pre>
             <hr>
           

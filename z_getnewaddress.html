@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.1.0 RPC Docs - z_getnewaddress">
+    <meta name="description" content="Zcash 6.2.0 RPC Docs - z_getnewaddress">
     <meta name="author" content="">
-    <title>z_getnewaddress - Zcash 6.1.0 RPC Docs</title>
+    <title>z_getnewaddress - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
   <style>
@@ -23,20 +23,40 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Zcash 6.1.0 RPC Docs</a>
+      <a class="navbar-brand" href="/">Zcash 6.2.0 RPC Docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-            <h1>z_getnewaddress - Zcash 6.1.0 RPC</h1>
+            <h1>z_getnewaddress - Zcash 6.2.0 RPC</h1>
           
-            <pre>z_getnewaddress is DEPRECATED and will be removed in a future release
+            <pre>z_getnewaddress ( type )
 
-Use z_getnewaccount and z_getaddressforaccount instead, or restart 
-with `-allowdeprecated=z_getnewaddress` if you require backward compatibility.
+z_getnewaddress is DISABLED and will be removed in a future release.
+Please use z_getnewaccount and z_getaddressforaccount instead.
+You can restart the node with `-allowdeprecated=z_getnewaddress`
+to re-enable this method during its deprecation period.
 See https://zcash.github.io/zcash/user/deprecation.html for more information.
+
+Returns a new shielded address for receiving payments.
+
+With no arguments, this currently returns a Sapling address (but that
+should not be relied on).
+Generating a Sprout address is not allowed after Canopy has activated.
+
+Arguments:
+1. &#34;type&#34;         (string, optional, default=&#34;sapling&#34;) The type of address. One of [&#34;sprout&#34;, &#34;sapling&#34;].
+
+Result:
+&#34;zcashaddress&#34;    (string) The new shielded address.
+
+Examples:
+&gt; zcash-cli z_getnewaddress 
+&gt; zcash-cli z_getnewaddress sapling
+&gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;z_getnewaddress&#34;, &#34;params&#34;: [] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:8232/
+
 </pre>
             <hr>
           
