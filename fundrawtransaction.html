@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.1.0 RPC Docs - fundrawtransaction">
+    <meta name="description" content="Zcash 6.2.0 RPC Docs - fundrawtransaction">
     <meta name="author" content="">
-    <title>fundrawtransaction - Zcash 6.1.0 RPC Docs</title>
+    <title>fundrawtransaction - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
   <style>
@@ -23,16 +23,21 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Zcash 6.1.0 RPC Docs</a>
+      <a class="navbar-brand" href="/">Zcash 6.2.0 RPC Docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-            <h1>fundrawtransaction - Zcash 6.1.0 RPC</h1>
+            <h1>fundrawtransaction - Zcash 6.2.0 RPC</h1>
           
             <pre>fundrawtransaction &#34;hexstring&#34; includeWatching
+
+fundrawtransaction is DEPRECATED and will be removed in a future release.
+Zallet will instead provide new RPC methods that operate on PCZTs:
+https://github.com/zcash/wallet/issues/99
+See https://zcash.github.io/zcash/user/deprecation.html for more information.
 
 Add transparent inputs to a transaction until it has enough in value to meet its out value.
 This will not modify existing inputs, and will add one change output to the outputs.
