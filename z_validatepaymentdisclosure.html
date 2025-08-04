@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.2.0 RPC Docs - z_validatepaymentdisclosure">
+    <meta name="description" content="Zcash 6.3.0 RPC Docs - z_validatepaymentdisclosure">
     <meta name="author" content="">
     <title>z_validatepaymentdisclosure - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
@@ -37,6 +37,15 @@
 Validates a payment disclosure. This only supports Sprout.
 
 EXPERIMENTAL, DEPRECATED FEATURE
+
+WARNING: z_validatepaymentdisclosure is disabled.
+To enable it, restart zcashd with the following command line options:
+-experimentalfeatures and -paymentdisclosure
+
+Alternatively add these two lines to the zcash.conf file:
+
+experimentalfeatures=1
+paymentdisclosure=1
 
 Arguments:
 1. &#34;paymentdisclosure&#34;     (string, required) Hex data string, with &#34;zpd:&#34; prefix.

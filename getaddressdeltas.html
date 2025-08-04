@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.2.0 RPC Docs - getaddressdeltas">
+    <meta name="description" content="Zcash 6.3.0 RPC Docs - getaddressdeltas">
     <meta name="author" content="">
     <title>getaddressdeltas - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
@@ -43,6 +43,21 @@ If start or end are not specified, they default to zero.
 If start is greater than the latest block height, it&#39;s interpreted as that height.
 
 If end is zero, it&#39;s interpreted as the latest block height.
+
+WARNING: getaddressdeltas is disabled.
+To enable it, restart zcashd with the following command line options:
+-experimentalfeatures and -insightexplorer or:
+-experimentalfeatures and -lightwalletd
+
+Alternatively add these two lines to the zcash.conf file:
+
+experimentalfeatures=1
+insightexplorer=1
+
+or:
+
+experimentalfeatures=1
+lightwalletd=1
 
 Arguments:
 {

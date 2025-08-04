@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.2.0 RPC Docs - getblockdeltas">
+    <meta name="description" content="Zcash 6.3.0 RPC Docs - getblockdeltas">
     <meta name="author" content="">
     <title>getblockdeltas - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
@@ -35,6 +35,21 @@
             <pre>getblockdeltas &#34;blockhash&#34;
 
 Returns information about the given block and its transactions.
+
+WARNING: getblockdeltas is disabled.
+To enable it, restart zcashd with the following command line options:
+-experimentalfeatures and -insightexplorer or:
+-experimentalfeatures and -lightwalletd
+
+Alternatively add these two lines to the zcash.conf file:
+
+experimentalfeatures=1
+insightexplorer=1
+
+or:
+
+experimentalfeatures=1
+lightwalletd=1
 
 Arguments:
 1. &#34;hash&#34;          (string, required) The block hash
