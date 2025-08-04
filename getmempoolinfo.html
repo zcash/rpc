@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.2.0 RPC Docs - getmempoolinfo">
+    <meta name="description" content="Zcash 6.3.0 RPC Docs - getmempoolinfo">
     <meta name="author" content="">
     <title>getmempoolinfo - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,11 @@ Result:
   &#34;size&#34;: xxxxx                (numeric) Current tx count
   &#34;bytes&#34;: xxxxx               (numeric) Sum of all tx sizes
   &#34;usage&#34;: xxxxx               (numeric) Total memory usage for the mempool
+  &#34;fullyNotified&#34;: true|false  (boolean, regtest only)
+                               Whether the node has finished notifying all
+                               listeners/tests about every transaction currently
+                               in the mempool. This key is returned only when the
+                               node is running in regtest.
 }
 
 Examples:

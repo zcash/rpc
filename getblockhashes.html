@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.2.0 RPC Docs - getblockhashes">
+    <meta name="description" content="Zcash 6.3.0 RPC Docs - getblockhashes">
     <meta name="author" content="">
     <title>getblockhashes - Zcash 6.2.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
@@ -37,6 +37,21 @@
 Returns array of hashes of blocks within the timestamp range provided,
 
 greater or equal to low, less than high.
+
+WARNING: getblockhashes is disabled.
+To enable it, restart zcashd with the following command line options:
+-experimentalfeatures and -insightexplorer or:
+-experimentalfeatures and -lightwalletd
+
+Alternatively add these two lines to the zcash.conf file:
+
+experimentalfeatures=1
+insightexplorer=1
+
+or:
+
+experimentalfeatures=1
+lightwalletd=1
 
 Arguments:
 1. high                            (numeric, required) The newer block timestamp
