@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Zcash 6.3.0 RPC Docs - getblockhashes">
+    <meta name="description" content="Zcash 6.10.0 RPC Docs - getblockhashes">
     <meta name="author" content="">
-    <title>getblockhashes - Zcash 6.2.0 RPC Docs</title>
+    <title>getblockhashes - Zcash 6.10.0 RPC Docs</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
   <style>
@@ -23,35 +23,20 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Zcash 6.2.0 RPC Docs</a>
+      <a class="navbar-brand" href="/">Zcash 6.10.0 RPC Docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-            <h1>getblockhashes - Zcash 6.2.0 RPC</h1>
+            <h1>getblockhashes - Zcash 6.10.0 RPC</h1>
           
             <pre>getblockhashes high low ( {&#34;noOrphans&#34;: true|false, &#34;logicalTimes&#34;: true|false} )
 
 Returns array of hashes of blocks within the timestamp range provided,
 
 greater or equal to low, less than high.
-
-WARNING: getblockhashes is disabled.
-To enable it, restart zcashd with the following command line options:
--experimentalfeatures and -insightexplorer or:
--experimentalfeatures and -lightwalletd
-
-Alternatively add these two lines to the zcash.conf file:
-
-experimentalfeatures=1
-insightexplorer=1
-
-or:
-
-experimentalfeatures=1
-lightwalletd=1
 
 Arguments:
 1. high                            (numeric, required) The newer block timestamp
